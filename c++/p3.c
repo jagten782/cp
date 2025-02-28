@@ -12,15 +12,16 @@ int main()
        scanf("%d",&arr[i]);
     }
     for(int i=0;i<n;i++)
-    { int c=0;
-        for(int j=0;j<n;j++)
+    { int c=1;
+        for(int j=i+1;j<n;j++)
         {
           if(arr[i]==arr[j])
           {
             c++;
+            arr[j]=-1000;
           }
         }
-        if((arr[i]!=-10000))
+        if((arr[i]!=-1000))
         {
         printf(" %d occured %d times \n",arr[i],c);
         arr[i]=-10000;
